@@ -9,6 +9,10 @@ app.use(cors())
 app.use(express.json())
 
 app.post('/api/send', async (req, res) => {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ message: 'Method not allowed' })
+  }
+
   const { name, email, message } = req.body
 
   // Configure your SMTP transporter
