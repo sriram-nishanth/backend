@@ -1,5 +1,5 @@
+import nodemailer from 'nodemailer';
 import express from 'express'
-import nodemailer from 'nodemailer' // Ensure you have nodemailer installed
 import cors from 'cors'
 import dotenv from 'dotenv'
 dotenv.config()
